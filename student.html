@@ -10,6 +10,24 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Student</title>
+	<script> 
+    function increaseFontSizeBy1px() {
+        var id = document.documentElement;
+        var style = window.getComputedStyle(id, null).getPropertyValue('font-size');
+        var currentSize = parseInt(style);
+        currentSize++;
+		console.log(currentSize);
+        document.documentElement.style.fontSize = currentSize.toString() + 'px';
+    }
+	function decreaseFontSizeBy1px() {
+        var id = document.documentElement;
+        var style = window.getComputedStyle(id, null).getPropertyValue('font-size');
+        var currentSize = parseInt(style);
+        currentSize--;
+		console.log(currentSize);
+        document.documentElement.style.fontSize = currentSize.toString() + 'px';
+    }
+</script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,7 +56,10 @@
             </li>
         </ul>
         <span class="navbar-text">
-      Zmiana kotrastu
+		<input type="button" value="+" onclick="increaseFontSizeBy1px()">
+		A
+		<input type="button" value="-" onclick="decreaseFontSizeBy1px()">
+      Zmiana kontrastu
     </span>
 
         </span>
@@ -52,6 +73,65 @@
         </div>
     </div>
 </div>
+<div id="breadcrumbs" style="background-color:silver">
+Dla studenta
+</div>
+
+<div class="container my-5 py-5 z-depth-1">
+<h4>Wydziałowa Komisja Stypendialna:</h4><br>
+
+<h5>STYPENDIUM REKTORA:</h5><br>
+<h6>Przewodnicząca: mgr Ewa Fluks – koordynator ds. stypendialnych, e-mail: ekf@biol.uw.edu.pl</h6><br>
+
+<h5>STYPENDIUM SOCJALNE:</h5><br>
+<h6>Przewodnicząca: mgr Ewa Fluks – koordynator ds. stypendialnych, e-mail: ekf@biol.uw.edu.pl</h6><br>
+
+<h5>STYPENDIUM DLA OSÓB NIEPEŁNOSPRAWNYCH:</h5><br>
+<h6>Przewodnicząca: mgr Ewa Fluks – koordynator ds. stypendialnych, e-mail: ekf@biol.uw.edu.pl</h6><br>
+
+<h5>ZAPOMOGA:</h5><br>
+<h6>Przewodnicząca: mgr Ewa Fluks – koordynator ds. stypendialnych, e-mail: ekf@biol.uw.edu.pl</h6><br>
+
+<br>
+<h3>Rodzaje stypendiów</h3>
+<br>
+<div class="card w-75">
+  <div class="card-header">
+    <h5>Stypendium rektora</h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Jest to nagroda dla studentów, którzy uzyskali za rok studiów wysoką średnią lub posiadają osiągnięcia naukowe, artystyczne lub wysokie wyniki sportowe we współzawodnictwie krajowym lub międzynarodowym. Im wyższe osiągnięcia tym wyższa kwota stypendium.</p>
+  </div>
+</div>
+<br>
+<div class="card w-75">
+  <div class="card-header">
+    <h5>Stypendium dla osób niepełnosprawnych</h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Przyznawane jest studentom niepełnosprawnym, na podstawie orzeczenia o niepełnosprawności. Jego wysokość uzależniona jest od stopnia niepełnosprawności.</p>
+	</div>
+</div>
+<br>
+<div class="card w-75">
+  <div class="card-header">
+    <h5>Stypendium socjalne</h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Przyznawane jest studentom, znajdującym się w trudnej sytuacji materialnej. Studenci składający wniosek o taką pomoc, muszą przedłożyć dokument poświadczający wysokość miesięcznych dochodów na osobę w rodzinie. Nie może być on wyższy, niż kwota określona w ustawie o świadczeniach rodzinnych. Im niższy jest dochód studenta, tym wyższa kwota stypendium.</p>
+	</div>
+</div>
+<br>
+<div class="card w-75">
+  <div class="card-header">
+    <h5>Zapomoga</h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Przyznawane jest studentom niepełnosprawnym, na podstawie orzeczenia o niepełnosprawności. Jego wysokość uzależniona jest od stopnia niepełnosprawności.</p>
+  </div>
+</div>
+</div>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

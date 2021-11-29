@@ -10,6 +10,24 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Rekrutacja</title>
+	<script> 
+    function increaseFontSizeBy1px() {
+        var id = document.documentElement;
+        var style = window.getComputedStyle(id, null).getPropertyValue('font-size');
+        var currentSize = parseInt(style);
+        currentSize++;
+		console.log(currentSize);
+        document.documentElement.style.fontSize = currentSize.toString() + 'px';
+    }
+	function decreaseFontSizeBy1px() {
+        var id = document.documentElement;
+        var style = window.getComputedStyle(id, null).getPropertyValue('font-size');
+        var currentSize = parseInt(style);
+        currentSize--;
+		console.log(currentSize);
+        document.documentElement.style.fontSize = currentSize.toString() + 'px';
+    }
+</script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,6 +56,9 @@
             </li>
         </ul>
         <span class="navbar-text">
+		<input type="button" value="+" onclick="increaseFontSizeBy1px()">
+		A
+		<input type="button" value="-" onclick="decreaseFontSizeBy1px()">
       Zmiana kotrastu
     </span>
 
@@ -52,7 +73,9 @@
         </div>
     </div>
 </div>
-
+<div id="breadcrumbs" style="background-color:silver">
+Rekrutacja
+</div>
 
 <div class="container my-5 py-5 z-depth-1">
 
